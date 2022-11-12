@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The Notsomodding Tree",
 	id: "wtfs0",
 	author: "whatthefoxsay0",
-	pointsName: "points",
+	pointsName: "bananas",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -43,6 +43,8 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	if (hasUpgrade("p", 21)) gain = gain.times(upgradeEffect("p", 21))
+	if (hasUpgrade("p", 22)) gain = gain.times(upgradeEffect("p", 22))
 	return gain
 }
 
