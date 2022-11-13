@@ -151,7 +151,7 @@ addLayer("t", {
             effectDisplay() { return "/"+format(upgradeEffect(this.layer, this.id))}
         },
     },
-    layerShown(){return hasUpgrade("p", 23) || player.t.best.gte(0)},
+    layerShown(){return hasUpgrade("p", 23) || player.t.best.gt(0)},
 })
 addLayer("f", {
     name: "food",
